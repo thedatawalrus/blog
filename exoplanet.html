@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Exoplanets</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<!-- <script type="text/javascript" src="../d3/d3.v3.js"></script> -->
+		<script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://d3-legend.susielu.com/d3-legend.min.js"></script>
+		<!-- <script src="d3.legend.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="../blog.css">
+	</head>
+	<body>
+	<div class="content">
+		<div class="post">
+                <h1 class="content-subhead">Recent Posts</h1>
+
+                <!-- A single blog post -->
+                <section class="post">
+                    <header class="post-header">
+						<h2 class="post-title">I want to believe.</h2>
+					</header>
+					<p class="post-description">
+						This is where the text will go for my data blog. I will have to toy around with the font and style and such...but this will give me an idea of how everything looks with text. So here is a visualization of space!
+					</p>
+
+					<div>
+						<button class="button button2"  onclick="updateData()">
+				                Habitable Zone 
+						</button>
+						<!-- <button class="button button2"  onclick="showAllData()">
+				                Show All 
+						</button> -->
+						<g id="slider">
+						<input id="slide" type="range"
+						 min="4" max="15" step=".25" value="15"
+						 onchange="updateSlider(this.value)" />
+						 <!-- <div id="chosen">100</div> -->
+						</g>
+					</div>
+					<div id="container" class="svg-container">
+					</div>
+					
+					<script type="text/javascript" src="../exoplanet.js"></script>
+					
+				</section>
+		</div>
+	</div>
+		
+		
+	</body>
+</html>
+
