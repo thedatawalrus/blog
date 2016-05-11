@@ -88,7 +88,7 @@ div.tooltip p {
     margin:0;
 }
 .home-menu {
-    background: #121328;
+    background: black;
 }
 .pure-menu.pure-menu-fixed {
    z-index: 1;
@@ -102,11 +102,14 @@ div.tooltip p {
 }
 
 .home-menu .pure-menu-heading {
-    font-family: Arial, "Cambria", serif;
+    font-family: Helvetica;
     color: white;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 200%;
     text-align: left;
+    font-variant: small-caps;
+    position: relative;
+    top: 20px;
 }
 
 .home-menu .pure-menu-selected a {
@@ -347,13 +350,4 @@ h3 {
         top: 0;
         bottom: 0;
     }
-}
-
-/* Hide the number input */
-.full-width-slider input {
-    display: none;
-    z-index: 1;
-}
-.full-width-slider .ui-slider-track {
-    margin-left: 15px;
 }
