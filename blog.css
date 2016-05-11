@@ -348,3 +348,12 @@ h3 {
         bottom: 0;
     }
 }
+
+/* Hide the number input */
+.full-width-slider input {
+    display: none;
+    z-index: 1;
+}
+.full-width-slider .ui-slider-track {
+    margin-left: 15px;
+}
