@@ -8,11 +8,8 @@
 		<script src="http://d3js.org/d3.v3.js"></script>
 		<script src="http://d3-legend.susielu.com/d3-legend.min.js"></script>
 		<!-- <script src="d3.legend.js"></script> -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="../blog.css">
-		<link rel="shortcut icon" type="image/x-icon" href="../walrus2.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="../walrus.ico">
 	</head>
 	<body>
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -35,22 +32,18 @@
 					</p>
 
 					<div>
-						<g class="button button2"  onclick="updateData()">
+						<button class="button button2"  onclick="updateData()">
 				                Habitable Zone 
-						</g>
+						</button>
 						<!-- <button class="button button2"  onclick="showAllData()">
 				                Show All 
 						</button> -->
-<!-- 						<g id="slider">
+						<g id="slider">
 						<input id="slide" type="range"
 						 min="4" max="15" step=".25" value="15"
 						 onchange="updateSlider(this.value)" />
-						</g> -->
-<form class="full-width-slider">
-    <label for="slider-12" class="ui-hidden-accessible">Slider:</label>
-    <input type="range" name="slider-12" id="slider-12" min="0" max="100" value="50">
-</form>
-
+						 <!-- <div id="chosen">100</div> -->
+						</g>
 					</div>
 					<div id="container" class="svg-container">
 					</div>
