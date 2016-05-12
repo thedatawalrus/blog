@@ -5,11 +5,13 @@ $("#example_id").ionRangeSlider({
     from: 15,
     step: 0.5,
     grid: true,
-    grid_snap: true,
+    // grid_snap: true,
     hide_min_max: true,
+    // hide_from_to: true,
+    // values: ["0","Earth","2","3","4"],
     onFinish: function (data) {
         updateSlider(data.from);
-        console.log(data.from);
+        console.log(data);
     }
 });
 

@@ -1,3 +1,22 @@
+#main {
+    /*width: 40%;*/
+    /*height: 50%;*/
+    /*border: 1px solid black; */
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    /*align-items: center;*/
+}
+#main div:nth-of-type(1) {flex-grow: 3;}
+#main div:nth-of-type(2) {flex-grow: 1;}
+#main div:nth-of-type(3) {flex-grow: 5;}
+#main div:nth-of-type(4) {flex-grow: 5;}
+
+#main div {
+   -webkit-flex: 1; /* Safari 6.1+ */
+   flex: 1;
+}
+
 .svg-container {
     display: inline-block;
     position: relative;
