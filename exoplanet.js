@@ -1,3 +1,18 @@
+
+$("#example_id").ionRangeSlider({
+    min: 4,
+    max: 15,
+    from: 15,
+    step: 0.5,
+    grid: true,
+    grid_snap: true,
+    hide_min_max: true,
+    onFinish: function (data) {
+        updateSlider(data.from);
+        console.log(data.from);
+    }
+});
+
 var cumulative = (function () {
     var json = null;
     $.ajax({

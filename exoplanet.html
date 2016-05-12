@@ -7,8 +7,11 @@
 		<!-- <script type="text/javascript" src="../d3/d3.v3.js"></script> -->
 		<script src="http://d3js.org/d3.v3.js"></script>
 		<script src="http://d3-legend.susielu.com/d3-legend.min.js"></script>
+		<script type="text/javascript" src="../ion.rangeSlider.min.js"></script>
 		<!-- <script src="d3.legend.js"></script> -->
 		<link rel="stylesheet" type="text/css" href="../blog.css">
+		<link rel="stylesheet" type="text/css" href="../ion.rangeSlider.css">
+		<link rel="stylesheet" type="text/css" href="../ion.rangeSlider.skinFlat.css">
 		<link rel="shortcut icon" type="image/x-icon" href="../walrus2.ico">
 	</head>
 	<body>
@@ -38,12 +41,12 @@
 						<!-- <button class="button button2"  onclick="showAllData()">
 				                Show All 
 						</button> -->
-						<g id="slider">
+						<!-- <g id="slider">
 						<input id="slide" type="range"
 						 min="4" max="15" step=".25" value="15"
 						 onchange="updateSlider(this.value)" />
-						 <!-- <div id="chosen">100</div> -->
-						</g>
+						</g> -->
+						<input type="text" id="example_id" name="example_name" value="" />
 					</div>
 					<div id="container" class="svg-container">
 					</div>
