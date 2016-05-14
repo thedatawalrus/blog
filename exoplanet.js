@@ -196,9 +196,6 @@ $("#example_id").ionRangeSlider({
 					div.append("p")
 						.text("Earth Radii: " + formatAsNumber(d.rade));
 
-					div.append("p")
-					.text("Earth Radii: " + formatAsNumber(rScale(d.rade)));
-
 			   })
 			   .on("mouseout", function() {
 			   
