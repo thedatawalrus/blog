@@ -1,20 +1,3 @@
-
-$("#example_id").ionRangeSlider({
-    min: 4,
-    max: 15,
-    from: 15,
-    step: 0.5,
-    grid: true,
-    // grid_snap: true,
-    hide_min_max: true,
-    // hide_from_to: true,
-    // values: ["0","Earth","2","3","4"],
-    onFinish: function (data) {
-        updateSlider(data.from);
-        console.log(data);
-    }
-});
-
 var cumulative = (function () {
     var json = null;
     $.ajax({
@@ -80,6 +63,54 @@ for (j = 0; j<cumulative.length;j++)
     }
 }
 
+var valueArray = [];
+
+			
+	for (i = 0; i<= d3.round(d3.max(dataset, function(d) { return +d.rade; }));i++)
+		{
+		   	if(i == 1) 
+    			{valueArray.push("Earth")} 
+    		else 
+    			{
+    				if(i == 11)
+    					{valueArray.push("Jupiter")} 
+    					else {
+    							// if(i==d3.round(d3.max(dataset, function(d) { return +d.rade; })))
+    							// 	{valueArray.push(i+"")}
+    							// 	else
+    								valueArray.push(i)
+    						}
+    			}		
+    	};
+
+
+$("#example_id").ionRangeSlider({
+    min: 0,
+    max: d3.round(d3.max(dataset, function(d) { return +d.rade; })),
+    from: d3.round(d3.max(dataset, function(d) { return +d.rade; })),
+    step: 1,
+    grid: true,
+    grid_snap: true,
+    hide_min_max: true,
+    // hide_from_to: true,
+    values: valueArray,
+    onFinish: function (data) {
+    	function value(dataPoint)
+    	{
+    		if(dataPoint == "Earth") 
+    			{return 1} 
+    		else 
+    			{
+    				if(dataPoint == "Jupiter")
+    					{return 11} 
+    					else {return dataPoint}
+    			}
+    	}
+        updateSlider(value(data.from));
+        console.log(valueArray);
+    }
+});
+
 
 //Width and height
 			var w = 1200;
@@ -119,9 +150,10 @@ for (j = 0; j<cumulative.length;j++)
 							.range(["#393b79","#9192b4","#b28688","#8d4a4d"])
 							;
 
-			var rScale = d3.scale.linear()
-								 .domain([d3.min(dataset, function(d) { return +d.rade; }), d3.max(dataset, function(d) { return +d.rade; })])
-							     .range([4,15]);
+
+			var rScale = d3.scale.quantize()
+								 .domain([1, d3.max(dataset, function(d) { return +d.rade; })])
+							     .range([0,1,2,3,4,5,6,7,8,9,10]);
 
 
 			var formatAsNumber = d3.format(",");
@@ -142,7 +174,7 @@ for (j = 0; j<cumulative.length;j++)
 			   		return yScale(+d.koi_fwm_sra);
 			   })
 			   .attr("r", function(d) {
-			   		return rScale(+d.rade);
+			   		return rScale(+d.rade)+3;
 			   })
 		   		.attr("fill", function(d) {
 				return colorScale(d.koi_teq);
@@ -163,6 +195,9 @@ for (j = 0; j<cumulative.length;j++)
 
 					div.append("p")
 						.text("Earth Radii: " + formatAsNumber(d.rade));
+
+					div.append("p")
+					.text("Earth Radii: " + formatAsNumber(rScale(d.rade)));
 
 			   })
 			   .on("mouseout", function() {
@@ -234,7 +269,7 @@ for (j = 0; j<cumulative.length;j++)
 					circles.transition()
 							.duration(500)
 							.style("opacity", function(d) {
-								if(rScale(+d.rade) <= +slideAmount)
+								if(+d.rade <= +slideAmount)
 								{
 									d.radeFlag = 1;
 									if(d.habFlag == 1)
@@ -255,7 +290,7 @@ for (j = 0; j<cumulative.length;j++)
 			    				}
     						})
 							.style("pointer-events", function(d) {
-								if(rScale(+d.rade) <= +slideAmount && d.habFlag == 1)
+								if(+d.rade <= +slideAmount && d.habFlag == 1)
 			    					{
 			    						return "all";
 			    					}
