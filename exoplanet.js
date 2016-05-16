@@ -152,8 +152,12 @@ $("#example_id").ionRangeSlider({
 
 
 			var rScale = d3.scale.quantize()
-								 .domain([1, d3.max(dataset, function(d) { return +d.rade; })])
-							     .range([0,1,2,3,4,5,6,7,8,9,10]);
+								 .domain([0, d3.max(dataset, function(d) { return +d.rade; })])
+							     .range([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]);
+
+			// var rScale = d3.scale.quantize()
+			// 		 .domain([0, d3.mean(dataset, function(d) { return +d.rade; }) + (3 * d3.deviation(dataset, function(d) { return +d.rade; }))])
+			// 	     .range([3,4,5,6,7,8,9,10]);
 
 
 			var formatAsNumber = d3.format(",");
