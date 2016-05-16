@@ -85,9 +85,11 @@ var valueArray = [];
 
 
 $("#example_id").ionRangeSlider({
+	type: "double",
     min: 0,
     max: d3.round(d3.max(dataset, function(d) { return +d.rade; })),
-    from: d3.round(d3.max(dataset, function(d) { return +d.rade; })),
+    from: 0,
+    to: d3.round(d3.max(dataset, function(d) { return +d.rade; })),
     step: 1,
     grid: true,
     grid_snap: true,
@@ -106,7 +108,7 @@ $("#example_id").ionRangeSlider({
     					else {return dataPoint}
     			}
     	}
-        updateSlider(value(data.from));
+        updateSlider(value(data.from),value(data.to));
         console.log(valueArray);
     }
 });
@@ -260,7 +262,7 @@ $("#example_id").ionRangeSlider({
 				  
 				};
 
-			function updateSlider(slideAmount) 
+			function updateSlider(slideMinAmount,slideMaxAmount) 
 				{
 					
 					var circles =svg.selectAll("circle")
@@ -270,7 +272,7 @@ $("#example_id").ionRangeSlider({
 					circles.transition()
 							.duration(500)
 							.style("opacity", function(d) {
-								if(+d.rade <= +slideAmount)
+								if(+d.rade <= +slideMaxAmount && +d.rade >= +slideMinAmount)
 								{
 									d.radeFlag = 1;
 									if(d.habFlag == 1)
@@ -291,7 +293,7 @@ $("#example_id").ionRangeSlider({
 			    				}
     						})
 							.style("pointer-events", function(d) {
-								if(+d.rade <= +slideAmount && d.habFlag == 1)
+								if(+d.rade <= +slideMaxAmount && +d.rade >= +slideMinAmount && d.habFlag == 1)
 			    					{
 			    						return "all";
 			    					}
