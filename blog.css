@@ -7,14 +7,23 @@
     display: flex;
     /*align-items: center;*/
 }
-#main div:nth-of-type(1) {flex-grow: 3;}
-#main div:nth-of-type(2) {flex-grow: 1;}
-#main div:nth-of-type(3) {flex-grow: 5;}
+#main div:nth-of-type(1) {flex-grow: 1;}
+#main div:nth-of-type(2) {flex-grow: 3;}
+#main div:nth-of-type(3) {flex-grow: .75;}
 #main div:nth-of-type(4) {flex-grow: 5;}
+#main div:nth-of-type(5) {flex-grow: 5;}
 
 #main div {
    -webkit-flex: 1; /* Safari 6.1+ */
    flex: 1;
+}
+
+.scale-description {
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .svg-container {
@@ -84,13 +93,17 @@ div.tooltip p {
     border: 2px solid #393b79;
 }
 .legendQuant {
+    font-family: sans-serif;
+    font-size: 14px;
  /* font-family: Georgia, "Cambria", serif;
     color: #444;*/
     /*font-size: 14px;*/
-    font-weight: bold;}
+    /*font-weight: bold;}*/
 
 .legendQuantHab {
-    font-weight: bold;}
+    font-family: sans-serif;
+    font-size: 14px;
+    /*font-weight: bold;}*/
 
 /*.button2:focus {
     background-color: #3399CC;
