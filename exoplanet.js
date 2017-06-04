@@ -220,7 +220,7 @@ $("#example_id").ionRangeSlider({
 		column("legend", colorScaleHab);
 
 		 function column(title, scale) {
-				  var legend = d3.legend.color()
+				  var legend = d3.legendColor()
 				  	.shapeHeight(30)
 				  	.title("Temperature (k)")
 				  	// .labelDelimiter("    ")
