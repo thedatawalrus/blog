@@ -30,7 +30,7 @@
     display: inline-block;
     position: relative;
     width: 100%;
-    padding-bottom: 100%;
+    padding-bottom: 55%;
     vertical-align: top;
     overflow: hidden;
 }
@@ -41,7 +41,7 @@
     top: 0;
     left: 0;
 }
-div.tooltip {
+div.viztooltip {
     position: absolute;
     width: 200px;
     height: auto;
@@ -68,7 +68,7 @@ div.tooltip {
     display: none;
 }*/
 
-div.tooltip p {
+div.viztooltip p {
     margin: 0;
     font-family: sans-serif;
     font-size: 16px;
