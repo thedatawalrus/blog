@@ -133,7 +133,7 @@ $("#example_id").ionRangeSlider({
 						.classed("svg-content", true);
 
 			var div = d3.select("body").append("div")	
-					    .attr("class", "tooltip")				
+					    .attr("class", "viztooltip")				
 					    .style("opacity", 0);
 
 
@@ -191,11 +191,14 @@ $("#example_id").ionRangeSlider({
 		   		})
 		   		.on("mouseover", function(d) {
 
+		   			var pageX=d3.event.pageX;
+        			var pageY=d3.event.pageY;
+
 					div.style("opacity", 1);	
 
 					div.text("Kepler Object Details")
-						.style("left", (d3.event.pageX) + "px")		
-						.style("top", (d3.event.pageY - 28) + "px");
+						.style("left", (pageX) + "px")		
+						.style("top", (pageY - 28) + "px");
 
 					div.append("p")
 						.text("ID: " + d.kepler_name);
