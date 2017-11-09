@@ -47,35 +47,15 @@
     <!-- <script src="jquery.js"></script>  -->
     <script> 
     $(function(){
-      $("#includedContent").load("exoplanet.html"); 
+      $("#includedHeader").load("head.html"); 
+      $("#includedFooter").load("footer.html"); 
     });
-    </script>
+    </script> 
   </head>
 
   <body>
 
-    <!-- Static navbar -->
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <img src="walrus_edit.png" width="50px" height="50px">
-          <a class="navbar-brand" href="index.html">Data Walrus</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <!-- <li><a href="work.html">Work</a></li> -->
-            <li><a href="index.html">Blog</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+    <div id="includedHeader"></div>
 
 	
 	<!-- +++++ Post +++++ -->
@@ -103,7 +83,6 @@
 					<p>There are a couple key factors that are used to determine if exoplanets are Earth 2.0. The first is size (turns out that matters). If an exoplanet’s radius is similar to Earth’s radius then it will more likely be a rocky planet. This is in contrast to the larger “gas giant” planets (e.g., Jupiter) that don’t tend to be habitable. The second indicator is the temperature of the planet. Life doesn’t tend to flourish in extremely cold or warm environments. The exoplanet temperature is determined by how close it is to its host star. The type of host star also matters, but we won’t get into that. You basically want an exoplanet that isn’t too close or too far from its host star. This area is commonly referred to as the “goldilocks” or “habitable” zone.</p>
 
 					<p>With this knowledge about exoplanets, I set out for some data. I got some great information from the fine folks at Caltech. They have some really useful data available within their NASA exoplanet archive. For this analysis I looked at the exoplanet’s location using its right ascension and declination, radius relative to earth (earth radii), and temperature (Kelvin). Below is the initial visualization I created using this information. Each dot is an exoplanet, with its size representing the radius, and color being the temperature.</p>
-					<!-- <div id="includedContent"></div> -->
 					<div id="main">
 						<div></div>
 						<div>
@@ -168,43 +147,7 @@
 	
 	
 	
-	<!-- +++++ Footer Section +++++ -->
-	
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-	<!-- 			<div class="col-lg-4">
-					<h4>My Bunker</h4>
-					<p>
-						Some Address 987,<br/>
-						+34 9054 5455, <br/>
-						Madrid, Spain.
-					</p>
-				</div> -->
-				
-				<div class="col-lg-4">
-					<h4>My Links</h4>
-					<p>
-						<a href="https://github.com/thedatawalrus/thedatawalrus.github.io">Github</a><br/>
-						<a href="https://twitter.com/data_walrus">Twitter</a><br/>
-						<!-- <a href="#">Facebook</a> -->
-					</p>
-				</div><!-- /col-lg-4 -->
-				<div class="col-lg-4">
-					<h4></h4>
-					<p>
-					</p>
-				</div>
-				
-				<div class="col-lg-4">
-					<h4>About Data Walrus</h4>
-					<p>Putting together interesting visualizations using several different data tools!</p>
-				</div><!-- /col-lg-4 -->
-			
-			</div>
-		
-		</div>
-	</div>
+	<div id="includedFooter"></div>
 	
 
     <!-- Bootstrap core JavaScript

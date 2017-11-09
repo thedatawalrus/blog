@@ -90,13 +90,13 @@ a:after {
 }
 
 .navbar-inverse {
-	padding-bottom: 40px;
-	padding-top: 40px;
+	padding-bottom: 25px;
+	padding-top: 25px;
 }
 
 .navbar-inverse {
-	background-color: #7193e2;
-	border-color: #6c90e2;
+	background-color: #61c697;
+	border-color: #61c697;
 }
 
 .navbar-inverse .navbar-nav > li > a {
