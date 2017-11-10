@@ -3,7 +3,7 @@ var cumulative = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': "./cumulative.json",
+        'url': "analysis/exoplanet/cumulative.json",
         'dataType': "json",
         'success': function (data) {
             json = data;
@@ -17,7 +17,7 @@ var exoplanet = (function () {
     $.ajax({
         'async': false,
         'global': false,
-        'url': "./exoplanet.json",
+        'url': "analysis/exoplanet/exoplanet.json",
         'dataType': "json",
         'success': function (data) {
           json = data;
