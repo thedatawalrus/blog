@@ -367,11 +367,6 @@ img {
   border-radius: 50%;
 }
 
-.img-brand {
-  position: relative;
-  left: 5px;
-}
-
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -4492,7 +4487,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-brand {
-  /*float: right;*/
+  float: left;
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
