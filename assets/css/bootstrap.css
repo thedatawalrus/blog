@@ -367,6 +367,11 @@ img {
   border-radius: 50%;
 }
 
+.img-brand {
+  position: relative;
+  left: 5px;
+}
+
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
