@@ -18,7 +18,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/walrus2.ico">
     <!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
 
-    <title>Data Walrus - MLB</title>
+    <title>Data Walrus - House Hunters</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -55,13 +55,16 @@
 					<p><img src="assets/img/user.png" width="5%" height="5%"> <ba>Data Walrus</ba></p>
 					<p><bd>December 22, 2017</bd></p>
 					<h4>House hunters</h4>
-					<p>I recently stumbled upon some great housing data from <a href = https://www.zillow.com/research/data/> zillow </a>and decided to play around with it. I was interested to see how much home values have historically changed. With that, I started to put together a visualization that highlighted the year over year percent change in price per square foot (ppsf) by zip code. The visualization also shows how the median ppsf compares to the S&P 500 during the same period. I again used Tableau to create an animation of this progression over the last 20 years</p>
+					<p>I recently stumbled upon some great housing data from <a href = https://www.zillow.com/research/data/> zillow </a>and decided to play around with it. I was interested to see how much home values have historically changed. With that, I started to put together a visualization that highlighted the year over year percent change in price per square foot (ppsf) by zip code. The visualization also shows how the median ppsf compares to the S&P 500 during the same period. I used Tableau to create an animation of this progression over the last 20 years</p>
 					
 					<p><img class="img-responsive" src="assets/img/home_value.gif" alt=""></p>
-					<p>Each bubble on the map is a specific zip code. These bubbles will be larger if they have a high population. For the percent change I compared the ppsf for a month to the previous year's ppsf for the same month. The bubble will be a darker green/blue (aqua?) if there is high percentage increase and a darker red if there is a large percentage decrease. Finally, I added a scrolling line chart at the bottom to show the median ppsf in the US over time, as well as the S&P 500 as an index.</p>
-					<p>There were some cool insights that came about from this visualization. The most obvious insight was the decline in home values around 2008 due to the housing market crash. Specifically, when the housing crash started and it took some time for other markets to be affected. The housing crisis starts around summer of 2007, but the S&P 500 doesn't start its sharp decline until a year later. 
+					<p>Each bubble on the map is a specific zip code. These bubbles will be larger if they have a high population. For the percent change I compared the ppsf of a month to the previous year's ppsf of the same month. The bubble will be a darker green/blue (aqua?) if there is a high percentage increase and a darker red if there is a large percentage decrease. Finally, I added a scrolling line chart at the bottom to show the median ppsf in the US over time, as well as the S&P 500 as an index.</p>
+					
+					<p>There were some cool insights that came about from this visualization. Most insights were releated to the decline in home values around 2008 due to the housing market crash. Specifically, when the housing crash started it took some time for other markets to be affected. The housing crisis starts around the summer of 2007, but the S&P 500 doesn't start its sharp decline until a year later. 
+					
 					<p>It's also interesting to see where in the country the early signs of the housing crisis appeared. Most notably, we see a lot of red around the Midwest as early as 2006.</p>
-					<p>This visualization also helps highlight how home values tend to appreciate. Over this 20-year period many of the months show the map covered in green/blue (aqua? teal?). It is important to note that the housing crash left much room for growth, but the market could have also leveled off. Instead, the housing market started to turn around realtively quickly and is near its pre-crash levels.</p>
+					
+					<p>This visualization also helps highlight how home values tend to appreciate. Over this 20-year period many of the months show the map covered in green/blue (aqua? teal?). It is important to note that the housing crash left much room for growth, but the market could have leveled off or continued it's decline. Instead, the housing market turned around realtively quickly and is now near its pre-crash levels.</p>
 					<p>All and all, it will be interesting to see what the next few years hold in store for the housing market. In the meantime I'm going to hop in a time machine and buy a house in 2012.</p>
 					<!-- <br>
 					<p><bt>TAGS: <a href="#">Wordpress</a> - <a href="#">Web Design</a></bt></p>
@@ -76,8 +79,8 @@
 					*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
 					var disqus_config = function () {
-					this.page.url = www.datawalrus.co/mlb.html;  // Replace PAGE_URL with your page's canonical URL variable
-					this.page.identifier = mlb; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					this.page.url = www.datawalrus.co/home_value.html;  // Replace PAGE_URL with your page's canonical URL variable
+					this.page.identifier = home_value; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 					};
 
 					(function() { // DON'T EDIT BELOW THIS LINE
